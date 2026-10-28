@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Konkave Engineering Limited — Civil Engineering & Construction, Abuja</title>
+<meta name="description" content="Konkave Engineering Limited (RC 1585586) is a Nigerian civil engineering and construction company based in Garki II, Abuja — roads, bridges, buildings, real estate, pre-cast concrete and solar energy EPC.">
+<meta name="theme-color" content="#4B1919">
+<meta property="og:title" content="Konkave Engineering Limited">
+<meta property="og:description" content="Civil engineering and construction company registered in Nigeria. Going above and beyond!">
+<meta property="og:image" content="assets/konkave-lockup.png">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#4B1919; --maroon-deep:#2E0F0F; --yellow:#FFD21F; --sun:#FBB320; --orange:#F38B1F;
+  --green:#00A650; --teal:#85CDC1; --ink:#1E1C1C; --muted:#5E5757; --paper:#FFFDF7; --line:#ECE4D6;
+  --radius:14px; --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:"Barlow",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,.display{font-family:"Barlow Condensed",sans-serif;line-height:1.02;letter-spacing:.2px}
+.wrap{width:min(var(--max),100% - 40px);margin-inline:auto}
+.eyebrow{font-family:"Barlow Condensed";font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:14px;color:var(--orange);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:3px;background:var(--green);border-radius:2px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;border:2px solid transparent;font-size:16px;cursor:pointer}
+.btn-sun{background:linear-gradient(135deg,var(--yellow),var(--orange));color:var(--maroon-deep);box-shadow:0 8px 24px -8px rgba(243,139,31,.7)}
+.btn-sun:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(243,139,31,.8)}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{border-color:var(--yellow);color:var(--yellow)}
+
+/* NAV */
+header{position:sticky;top:0;z-index:50;background:rgba(255,253,247,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{height:54px;width:auto}
+.brand b{font-family:"Barlow Condensed";font-weight:800;font-size:24px;letter-spacing:1px;display:block;line-height:1}
+.brand small{display:block;font-size:11px;letter-spacing:2.6px;text-transform:uppercase;color:var(--muted);font-weight:600}
+.links{display:flex;gap:30px;list-style:none;align-items:center}
+.links a{text-decoration:none;font-weight:500;font-size:15px;color:var(--ink);position:relative}
+.links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--orange);transition:width .25s}
+.links a:not(.btn):hover::after{width:100%}
+.links .btn{padding:10px 20px;font-size:14px}
+.menu-btn{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.menu-btn span{display:block;width:24px;height:2px;background:var(--ink);margin:5px auto;transition:.25s}
+
+/* HERO */
+.hero{position:relative;background:radial-gradient(1200px 600px at 85% 20%,#6b2422 0%,var(--maroon) 45%,var(--maroon-deep) 100%);color:#fff;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(to bottom,#000 40%,transparent);z-index:-1}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding:96px 0 150px}
+.hero h1{font-size:clamp(46px,7vw,92px);font-weight:800;text-transform:uppercase}
+.hero h1 em{font-style:italic;background:linear-gradient(100deg,var(--yellow),var(--orange));-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:6px}
+.hero p.lead{font-size:19px;color:rgba(255,255,255,.82);max-width:540px;margin:24px 0 34px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-mark{position:relative;justify-self:center}
+.hero-mark .sun{position:absolute;inset:-10% -14%;background:radial-gradient(circle,rgba(255,210,31,.55),rgba(243,139,31,.12) 55%,transparent 70%);filter:blur(10px);animation:pulse 6s ease-in-out infinite}
+.hero-mark img{position:relative;width:min(420px,80vw);filter:drop-shadow(0 30px 40px rgba(0,0,0,.35));animation:float 7s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.06);opacity:.85}}
+@keyframes float{50%{transform:translateY(-10px)}}
+.hero-curve{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:38px}
+.chip{font-size:13px;padding:7px 14px;border:1px solid rgba(255,255,255,.2);border-radius:999px;color:rgba(255,255,255,.85);background:rgba(255,255,255,.04)}
+.chip b{color:var(--yellow);font-weight:600}
+
+/* SECTIONS */
+section{padding:100px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:52px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(38px,5vw,60px);font-weight:800;text-transform:uppercase;margin-top:10px;max-width:640px}
+.sec-head p{max-width:420px;color:var(--muted)}
+
+.services{display:grid;grid-template-columns:repeat(6,1fr);gap:22px}
+.card{grid-column:span 2;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}
+.card:nth-child(4),.card:nth-child(5){grid-column:span 3}
+.card::after{content:"";position:absolute;left:0;top:0;height:4px;width:0;background:linear-gradient(90deg,var(--green),var(--yellow),var(--orange));transition:width .4s}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 40px -24px rgba(75,25,25,.35);border-color:transparent}
+.card:hover::after{width:100%}
+.icon{width:56px;height:56px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#FFF4C2,#FFE08A);margin-bottom:22px;color:var(--maroon)}
+.icon svg{width:30px;height:30px}
+.card h3{font-size:27px;font-weight:700;margin-bottom:10px}
+.card p{color:var(--muted);font-size:16px}
+.num{position:absolute;right:22px;top:18px;font-family:"Barlow Condensed";font-weight:800;font-size:46px;color:#F4EEE2;line-height:1}
+
+/* PROJECT */
+.project{background:var(--maroon-deep);color:#fff;position:relative;overflow:hidden}
+.project::before{content:"";position:absolute;right:-180px;top:-180px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,210,31,.28),transparent 65%)}
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative}
+.project h2{font-size:clamp(38px,5vw,62px);font-weight:800;text-transform:uppercase;margin:14px 0 20px}
+.project p{color:rgba(255,255,255,.78);margin-bottom:28px}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.12);border-radius:var(--radius);overflow:hidden}
+.meta div{background:var(--maroon-deep);padding:20px 22px}
+.meta span{display:block;font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--teal);margin-bottom:4px;font-weight:600}
+.meta strong{font-family:"Barlow Condensed";font-size:22px;font-weight:700;line-height:1.15}
+.solar{position:relative;aspect-ratio:1/1;max-width:480px;justify-self:center;width:100%}
+.solar svg{width:100%;height:100%}
+.badge{position:absolute;left:0;bottom:8%;background:var(--green);color:#fff;padding:14px 20px;border-radius:12px;font-weight:600;font-size:14px;box-shadow:0 18px 30px -12px rgba(0,0,0,.5)}
+.badge b{display:block;font-family:"Barlow Condensed";font-size:24px;line-height:1}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:start}
+.about-grid h2{font-size:clamp(38px,5vw,58px);font-weight:800;text-transform:uppercase;margin:10px 0 22px}
+.about-grid p{color:var(--muted);margin-bottom:16px}
+.lockup{margin-top:30px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;max-width:460px}
+.facts{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.fact{display:grid;grid-template-columns:190px 1fr;gap:20px;padding:22px 28px;border-bottom:1px solid var(--line)}
+.fact:last-child{border-bottom:0}
+.fact span{font-size:13px;text-transform:uppercase;letter-spacing:1.6px;color:var(--orange);font-weight:600;padding-top:3px}
+.fact strong{font-weight:600;font-size:17px}
+.fact small{display:block;color:var(--muted);font-weight:400;font-size:14px}
+
+/* CONTACT */
+.contact{background:linear-gradient(180deg,var(--paper),#FFF3D1)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px}
+.cinfo{display:grid;gap:16px}
+.citem{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;text-decoration:none;transition:border-color .2s,transform .2s}
+a.citem:hover{border-color:var(--orange);transform:translateX(4px)}
+.citem .icon{margin:0;flex:none;width:48px;height:48px}
+.citem .icon svg{width:24px;height:24px}
+.citem span{font-size:13px;text-transform:uppercase;letter-spacing:1.6px;color:var(--muted);font-weight:600}
+.citem strong{display:block;font-size:18px;font-weight:600;overflow-wrap:anywhere}
+.citem>div:last-child,.contact-grid>*,.about-grid>*,.proj-grid>*,.hero-grid>*{min-width:0}
+form{background:var(--maroon);color:#fff;border-radius:18px;padding:36px;display:grid;gap:16px}
+form h3{font-size:34px;text-transform:uppercase;font-weight:800}
+form p{color:rgba(255,255,255,.7);font-size:15px;margin-top:-6px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{font-size:13px;letter-spacing:1px;text-transform:uppercase;font-weight:600;color:var(--teal);display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:16px;padding:13px 15px;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;outline:none;transition:border-color .2s}
+input,select,textarea,label,.row>*{width:100%;min-width:0}
+select option{color:var(--ink)}
+input:focus,select:focus,textarea:focus{border-color:var(--yellow)}
+textarea{min-height:120px;resize:vertical}
+form .btn{justify-self:start;border:0}
+
+/* FOOTER */
+footer{position:relative;background:#0F0B0B;color:rgba(255,255,255,.7);padding:70px 0 0;overflow:hidden}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:50px}
+.foot img{width:150px;margin-bottom:16px}
+.foot h4{font-family:"Barlow Condensed";color:#fff;font-size:20px;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.foot ul{list-style:none;display:grid;gap:8px;font-size:15px}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--yellow)}
+.tagbar{background:#000;border-top:3px solid var(--sun);padding:16px 0}
+.tagbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:14px}
+.tagbar em{font-family:"Barlow Condensed";font-weight:700;font-style:italic;font-size:24px;color:var(--yellow)}
+.squares{display:flex;gap:6px}.squares i{width:14px;height:14px;display:block}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+@media (max-width:980px){
+  .hero-grid,.proj-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-grid{padding:64px 0 130px;text-align:left}
+  .hero-mark{order:-1}.hero-mark img{width:min(280px,70vw)}
+  .services{grid-template-columns:1fr 1fr}
+  .card,.card:nth-child(4),.card:nth-child(5){grid-column:span 1}
+  .card:nth-child(5){grid-column:span 2}
+  .foot{grid-template-columns:1fr 1fr}.foot>div:first-child{grid-column:span 2}
+}
+@media (max-width:820px){
+  .menu-btn{display:block}
+  .links{position:fixed;top:76px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 20px 22px;transform:translateY(-130%);transition:transform .35s;z-index:-1}
+  .links li{width:100%}
+  .links a:not(.btn){display:block;padding:14px 0;border-bottom:1px solid var(--line)}
+  .links .btn{margin-top:16px}
+  header.open .links{transform:none}
+  header.open .menu-btn span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  header.open .menu-btn span:nth-child(2){opacity:0}
+  header.open .menu-btn span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  section{padding:72px 0}
+  .services{grid-template-columns:1fr}
+  .card,.card:nth-child(4),.card:nth-child(5){grid-column:span 1}
+  .fact{grid-template-columns:1fr;gap:4px;padding:18px 20px}
+  .row,.meta{grid-template-columns:1fr}
+  form{padding:26px 20px}
+  .foot{grid-template-columns:1fr}.foot>div:first-child{grid-column:auto}
+  .brand small{display:none}.brand img{height:46px}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="#top" aria-label="Konkave Engineering Limited — home">
+      <img src="assets/kel-mark.png" alt="KEL logo">
+      <span><b>KONKAVE</b><small>Engineering Limited</small></span>
+    </a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a class="btn btn-sun" href="#contact">Contact us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section class="hero" style="padding:0">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow" style="color:var(--yellow)">Civil Engineering &amp; Construction</span>
+      <h1 style="margin-top:18px">Building Nigeria. <em>Going above</em> and beyond.</h1>
+      <p class="lead">Konkave Engineering Limited is a civil engineering and construction company registered in Nigeria — delivering roads, bridges, buildings, real estate and energy infrastructure from our base in Abuja.</p>
+      <div class="cta">
+        <a class="btn btn-sun" href="#contact">Start a project
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#services">Our services</a>
+      </div>
+      <div class="chips">
+        <span class="chip">RC <b>1585586</b></span>
+        <span class="chip">Garki II, <b>Abuja FCT</b></span>
+        <span class="chip"><b>EPC</b> contractor</span>
+      </div>
+    </div>
+    <div class="hero-mark">
+      <div class="sun"></div>
+      <img src="assets/kel-mark.png" alt="Konkave Engineering Limited KEL emblem">
+    </div>
+  </div>
+  <svg class="hero-curve" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 70 C 420 140, 900 0, 1440 50 L1440 120 L0 120Z" fill="#85CDC1" opacity=".9"/>
+    <path d="M0 95 C 500 150, 1000 30, 1440 80 L1440 120 L0 120Z" fill="#FBB320"/>
+    <path d="M0 108 C 500 150, 1000 70, 1440 100 L1440 120 L0 120Z" fill="#FFFDF7"/>
+  </svg>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">What we do</span><h2>Core services &amp; specializations</h2></div>
+      <p>From structural planning to pre-cast production, we handle the full life of a build — design, procurement and construction.</p>
+    </div>
+    <div class="services">
+      <article class="card reveal"><span class="num">01</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V10l6-5 6 5v11"/><path d="M10 21v-6h4v6M9 12h.01M15 12h.01"/></svg></div>
+        <h3>Civil Engineering &amp; Structural Planning</h3><p>Site assessment, structural design and engineering plans that hold up — on paper and on site.</p></article>
+      <article class="card reveal"><span class="num">02</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17h20M4 17V12M20 17v-5M2 12c4 0 6-5 10-5s6 5 10 5"/><path d="M8 17v-6M12 17V7M16 17v-6"/></svg></div>
+        <h3>Bridge &amp; Road Construction</h3><p>Durable transport infrastructure built to connect communities and carry Nigeria's growth.</p></article>
+      <article class="card reveal"><span class="num">03</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2"/></svg></div>
+        <h3>Building Construction &amp; Design Upgrades</h3><p>New builds and architectural upgrades delivered with quality materials and careful finishing.</p></article>
+      <article class="card reveal"><span class="num">04</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><circle cx="12" cy="14" r="2"/><path d="M12 16v4"/></svg></div>
+        <h3>Real Estate Development &amp; Estate Management</h3><p>Planning, developing and managing residential and commercial estates that keep their value.</p></article>
+      <article class="card reveal"><span class="num">05</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="8" height="7" rx="1"/><rect x="13" y="4" width="8" height="7" rx="1"/><rect x="3" y="13" width="8" height="7" rx="1"/><rect x="13" y="13" width="8" height="7" rx="1"/></svg></div>
+        <h3>Pre-cast Concrete Production</h3><p>Factory-made concrete elements that cut site time, tighten tolerances and lower waste.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="project" id="projects">
+  <div class="wrap proj-grid">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--yellow)">Featured award</span>
+      <h2>Solar Micro Grid — Federal Polytechnic Kaduna</h2>
+      <p>Konkave Engineering Limited has been awarded and accepted the contract for the Engineering, Procurement and Construction (EPC) of a Solar Micro Grid for Federal Polytechnic, Kaduna State, by the Rural Electrification Agency.</p>
+      <div class="meta">
+        <div><span>Client</span><strong>Rural Electrification Agency (REA)</strong></div>
+        <div><span>Scope</span><strong>Engineering, Procurement &amp; Construction</strong></div>
+        <div><span>Location</span><strong>Federal Polytechnic, Kaduna State</strong></div>
+        <div><span>Award</span><strong>September 2025</strong></div>
+      </div>
+    </div>
+    <div class="solar reveal" aria-hidden="true">
+      <svg viewBox="0 0 400 400" fill="none">
+        <defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD21F"/><stop offset="1" stop-color="#F38B1F"/></linearGradient>
+        <linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b5f8a"/><stop offset="1" stop-color="#173954"/></linearGradient></defs>
+        <circle cx="290" cy="110" r="62" fill="url(#sg)"/>
+        <g stroke="#FFD21F" stroke-width="5" stroke-linecap="round" opacity=".7">
+          <path d="M290 22v18M290 180v18M202 110h18M360 110h18M228 48l12 12M340 160l12 12M352 48l-12 12M228 172l12-12"/></g>
+        <g transform="translate(40 200) skewX(-14)">
+          <rect x="30" y="0" width="230" height="120" rx="6" fill="url(#pg)" stroke="#85CDC1" stroke-width="3"/>
+          <g stroke="#85CDC1" stroke-opacity=".55" stroke-width="2"><path d="M87 0v120M145 0v120M203 0v120M30 40h230M30 80h230"/></g>
+        </g>
+        <path d="M90 320v50M210 320v50" stroke="#85CDC1" stroke-width="6" stroke-linecap="round"/>
+        <path d="M40 372h320" stroke="#00A650" stroke-width="6" stroke-linecap="round"/>
+        <path d="M330 250l-22 38h20l-16 36 40-50h-22l18-24z" fill="#00A650"/>
+      </svg>
+      <div class="badge"><b>EPC</b>Clean energy infrastructure</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <span class="eyebrow">Who we are</span>
+      <h2>An Abuja-based engineering company</h2>
+      <p>Konkave Engineering Limited brings engineering discipline to every stage of construction — from structural planning through procurement to delivery on site.</p>
+      <p>Our promise is in our motto: we go above and beyond to deliver quality work, on time, for public and private clients across Nigeria.</p>
+      <div class="lockup"><img src="assets/konkave-lockup.png" alt="Konkave Engineering Limited logo and wordmark, RC 1585586"></div>
+    </div>
+    <div class="facts reveal">
+      <div class="fact"><span>Legal name</span><strong>Konkave Engineering Limited<small>Also referenced as Konkave Engineering Services Limited</small></strong></div>
+      <div class="fact"><span>Registration</span><strong>RC 1585586<small>Registered with the Corporate Affairs Commission, Nigeria</small></strong></div>
+      <div class="fact"><span>Managing Director</span><strong>Engr. Andrew Bitrus<small>Managing Director / CEO</small></strong></div>
+      <div class="fact"><span>Head office</span><strong>Suite 12, POWA Plaza, Akintola Boulevard, Garki II, Abuja, FCT</strong></div>
+      <div class="fact"><span>Sector</span><strong>Civil engineering, construction, real estate &amp; energy EPC</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Get in touch</span><h2>Let's build something that lasts</h2></div>
+      <p>Call, email or visit our office in Garki. Tell us about your project and we'll get back to you.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="cinfo reveal">
+        <a class="citem" href="tel:+2348036270564"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div><div><span>Phone</span><strong>0803 627 0564</strong></div></a>
+        <a class="citem" href="tel:+2348185610286"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></div><div><span>Phone</span><strong>0818 561 0286</strong></div></a>
+        <a class="citem" href="mailto:konkaveengineering@gmail.com"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div><div><span>Email</span><strong>konkaveengineering@gmail.com</strong></div></a>
+        <a class="citem" href="https://www.google.com/maps/search/?api=1&query=POWA+Plaza+Akintola+Boulevard+Garki+II+Abuja" target="_blank" rel="noopener"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><span>Office</span><strong>Suite 12, POWA Plaza, Akintola Boulevard, Garki II, Abuja</strong></div></a>
+      </div>
+      <form class="reveal" id="enquiry">
+        <h3>Project enquiry</h3>
+        <p>Sends through your email app to konkaveengineering@gmail.com.</p>
+        <div class="row">
+          <label>Full name<input name="name" required autocomplete="name"></label>
+          <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+        </div>
+        <label>Service
+          <select name="service">
+            <option>Civil engineering &amp; structural planning</option>
+            <option>Bridge &amp; road construction</option>
+            <option>Building construction &amp; design upgrades</option>
+            <option>Real estate development &amp; estate management</option>
+            <option>Pre-cast concrete production</option>
+            <option>Solar / energy EPC</option>
+            <option>Other</option>
+          </select></label>
+        <label>Project details<textarea name="message" required placeholder="Location, scope, timeline…"></textarea></label>
+        <button class="btn btn-sun" type="submit">Send enquiry
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <img src="assets/kel-mark.png" alt="KEL logo">
+      <p style="max-width:340px">Konkave Engineering Limited — civil engineering and construction company registered in Nigeria. RC 1585586.</p>
+    </div>
+    <div><h4>Explore</h4><ul><li><a href="#services">Services</a></li><li><a href="#projects">Projects</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li><a href="tel:+2348036270564">0803 627 0564</a></li><li><a href="tel:+2348185610286">0818 561 0286</a></li><li><a href="mailto:konkaveengineering@gmail.com">konkaveengineering@gmail.com</a></li><li>Garki II, Abuja, FCT</li></ul></div>
+  </div>
+  <div class="tagbar"><div class="wrap">
+    <em>Going above and beyond!</em>
+    <span>© <span id="yr">2026</span> Konkave Engineering Limited</span>
+    <div class="squares"><i style="background:#FFD21F"></i><i style="background:#00A650"></i><i style="background:#FBB320"></i></div>
+  </div></div>
+</footer>
+
+<script>
+const h=document.querySelector('header'),mb=document.querySelector('.menu-btn');
+mb.addEventListener('click',()=>{const o=h.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>{h.classList.remove('open');mb.setAttribute('aria-expanded',false)}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.getElementById('yr').textContent=new Date().getFullYear();
+document.getElementById('enquiry').addEventListener('submit',e=>{
+  e.preventDefault();const f=new FormData(e.target);
+  const body=`Name: ${f.get('name')}\nPhone: ${f.get('phone')}\nService: ${f.get('service')}\n\n${f.get('message')}`;
+  location.href='mailto:konkaveengineering@gmail.com?subject='+encodeURIComponent('Project enquiry — '+f.get('service'))+'&body='+encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
